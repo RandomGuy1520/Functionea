@@ -150,14 +150,14 @@ static inline void check_achievement_star()
 	if (!player.achievements[9] && player.star_num >= 20)
 	{
 		player.achievements[9] = true;
-		player.star_num += 4;
+		player.star_num += 2;
 		player.LogInfoToFile();
 		out << "Achievement completed: Rich\n";
 	}
 	if (!player.achievements[10] && player.star_num >= 50)
 	{
 		player.achievements[10] = true;
-		player.star_num += 4;
+		player.star_num += 3;
 		player.LogInfoToFile();
 		out << "Achievement completed: Wealthy\n";
 	}
@@ -176,7 +176,7 @@ static inline void check_achievement_challenge()
 	if (!player.achievements[12] && player.completed_daily_challenge_num >= 5)
 	{
 		player.achievements[12] = true;
-		player.star_num += 4;
+		player.star_num += 3;
 		player.LogInfoToFile();
 		check_achievement_star();
 		out << "Achievement completed: Challenger\n";
@@ -184,7 +184,7 @@ static inline void check_achievement_challenge()
 	if (!player.achievements[13] && player.completed_daily_challenge_num >= 20)
 	{
 		player.achievements[13] = true;
-		player.star_num += 4;
+		player.star_num += 6;
 		player.LogInfoToFile();
 		check_achievement_star();
 		out << "Achievement completed: Super Challenger\n";
@@ -325,7 +325,7 @@ static inline void PlayGame()
 		}
 		if (player.level_num == num[player.level])
 		{
-			out << "Achivemenet completed: ";
+			out << "Achievement completed: ";
 			player.star_num += 4;
 			if (player.level == LEVEL1)
 				player.achievements[2] = true, out << "Rare\n";
@@ -364,6 +364,7 @@ static inline void Shop()
 	out << "You have " << player.star_num << " stars now. Here are some options.\n"; Sleep(1500);
 	system("cls");
 PrintOptions:
+	std::cout << "Stars: " << player.star_num << "\n";
 	std::cout << "Options: \n\n";
 	std::cout << "1. 1 star  -> 1 more try for current level\n";
 	std::cout << "2. 4 stars -> 1 clue for any level\n";

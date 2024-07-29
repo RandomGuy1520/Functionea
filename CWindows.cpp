@@ -10,7 +10,7 @@ static inline std::string getstr_clbuff()
 {
 	std::string res;
 	while (_kbhit()) _getch();
-	std::cin >> res;
+	std::getline(std::cin, res);
 	return res;
 }
 static inline void WordArt()
