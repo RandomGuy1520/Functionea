@@ -1,10 +1,49 @@
 #pragma once
-#include "Includes.cpp"
+#include "Includes.h"
 
 static constexpr int duration = 50; // milliseconds per character
 static const char* logFile = "log.txt";
-static const int MAXLINES = 9;
-static const std::vector<std::string> lst = { "Has played", "Player name", "Current level", "Current level number", "Level remaining tries", "Maximum tries", "Clue num", "Stars num", "Last time playing"};
+static const int MAXLINES = 33, MAXACHIEVEMENTS = 18;
+
+static const std::vector<std::string> lst = {
+	"Has played",
+	"Player name",
+	"Total time played",
+	"Current level",
+	"Current level number",
+	"Level remaining tries",
+	"Maximum tries",
+	"Clue num",
+	"Stars num",
+	"Last time playing",
+	"Last daily challenge",
+	"Last completed daily challenge",
+	"Completed daily challenges num"
+	// "Last daily challenge xnum"
+	// "Last daily challenge expression"
+};
+
+static const std::vector<std::string> achievements_lst = {
+	"Common               : Play one game                     ",
+	"Unusual              : Complete a daily challenge        ",
+	"Rare                 : Complete first level              ",
+	"Epic                 : Complete second level             ",
+	"Legendary            : Complete third level              ",
+	"Mythic               : Complete fourth level             ",
+	"Ultra                : Complete the whole game           ",
+	"Super                : Complete EVERY VISIBLE ACHIEVEMENT",
+	"Trader               : First trade                       ",
+	"Rich                 : Earn 20 stars                     ",
+	"Wealthy              : Earn 50 stars                     ",
+	"Bill Gates           : Earn 100 stars                    ",
+	"Challenger           : Complete 5 daily challenges       ",
+	"Super Challenger     : Complete 20 daily challenges      ",
+	"Tsai Joe Durian      : ???                               ",
+	"Gandhi               : ???                               ",
+	"Midnight Snack       : ???                               ",
+	"using namespace std; : ???                               ",
+};
+
 
 class IO
 {
