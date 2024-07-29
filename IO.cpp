@@ -2,7 +2,7 @@
 #include "Includes.h"
 
 static constexpr int duration = 50; // milliseconds per character
-static const char* logFile = "log.txt";
+static std::string logFile;
 static const int MAXLINES = 33, MAXACHIEVEMENTS = 18;
 
 static const std::vector<std::string> lst = {

@@ -31,8 +31,6 @@ static inline void str_replace(std::string& str, const std::string& replace_word
 static inline std::string is_valid(std::string str)
 {
 	to_lower(str);
-	if (str == "rere37")
-		return "administrator username";
 	std::vector<std::string> swear_words = { "fuck", "shit", "stupid", "bitch", "dick", "ass", "damn" };
 	for (char i : str)
 		if (!('0' <= i && i <= '9' || 'a' <= i && i <= 'z'))

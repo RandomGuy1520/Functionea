@@ -1,6 +1,7 @@
 #pragma once
 #include <iostream>
 #include <windows.h>
+#include <ShlObj.h>
 #include <conio.h>
 #include <cmath>
 #include <map>

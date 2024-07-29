@@ -43,6 +43,9 @@ public:
 	bool achievements[18];
 	Player()
 	{
+		char app_data_loc[MAX_PATH];
+		SHGetSpecialFolderPathA(NULL, app_data_loc, CSIDL_APPDATA, TRUE);
+		logFile = app_data_loc + (std::string)"\\Functionea\\log.txt";
 		std::vector<std::string> vec = out.ReadLog();
 		if (vec[0] == "")
 		{
